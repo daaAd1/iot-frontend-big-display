@@ -98,9 +98,11 @@ function getTransitInfo() {
   wrapper.addClass('wrapper');
   response.map((transit) => {
     const { mapRoute, name } = transit;
-    const bus = `<div class="cisloAutobusu">${mapRoute.lineNumber}</div>`;
-    const leaveTime = `<div class="casOdchodu">${mapRoute.departure_time}</div>`;
-    const stop = `<div class="zastavka">${mapRoute.departure_stop} --> ${name} </div>`;
+    const bus = `<div class="cisloAutobusu">${mapRoute.lineNumber}</div><hr />`;
+    const leaveTime = `<div class="casOdchodu">${mapRoute.departure_time}</div><hr />`;
+    const stop = `<div class="zastavka">${
+      mapRoute.departure_stop
+    } --> </div><hr /><div class="zastavka"> ${name} </div>`;
     const content = $('<div/>');
     content.addClass('content');
     content.append(bus, leaveTime, stop);
