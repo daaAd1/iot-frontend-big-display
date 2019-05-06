@@ -102,7 +102,7 @@ function getTransitInfo() {
     const leaveTime = `<div class="casOdchodu">${mapRoute.departure_time}</div><hr />`;
     const stop = `<div class="zastavka">${
       mapRoute.departure_stop
-    } --> </div><hr /><div class="zastavka"> ${name} </div>`;
+    } --> </div><hr /><div class="zastavka"> ${name} </div><hr /><hr/>`;
     const content = $('<div/>');
     content.addClass('content');
     content.append(bus, leaveTime, stop);
